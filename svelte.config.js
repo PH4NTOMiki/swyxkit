@@ -1,5 +1,5 @@
 import preprocess from 'svelte-preprocess';
-import adapter from '@sveltejs/adapter-vercel';
+import adapter from '@sveltejs/adapter-netlify';
 import { mdsvex } from 'mdsvex';
 import remarkGithub from 'remark-github';
 import remarkAbbr from 'remark-abbr';
@@ -44,9 +44,9 @@ const config = {
 	],
 
 	kit: {
-		adapter: adapter(/*{
+		adapter: adapter({
 			split: false
-		}*/)
+		})
 	}
 };
 
